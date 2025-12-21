@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <div class="noise"></div>
+  
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-content">
+      <div class="loading-logo">MP</div>
+      <div class="loading-bar">
+        <div class="loading-progress"></div>
+      </div>
+      <p class="loading-text">Igniting Digital Growth</p>
+    </div>
+  </div>
+
+  <!-- Sidebar Navigation (Desktop) -->
+  <nav class="sidebar">
+    <div class="sidebar-header">
+      <div class="logo-icon">MP</div>
+      <span class="logo-text">Portfolio</span>
+    </div>
+    
+    <ul class="sidebar-menu">
+      <li>
+        <a href="#home" class="active">
+          <i class="fas fa-home"></i>
+          <span class="link-text">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#about">
+          <i class="fas fa-user"></i>
+          <span class="link-text">About</span>
+        </a>
+      </li>
+      <li>
+        <a href="#services">
+          <i class="fas fa-bolt"></i>
+          <span class="link-text">Services</span>
+        </a>
+      </li>
+      <!-- Added Contact since we cut off projects -->
+      <li>
+        <a href="#contact">
+          <i class="fas fa-envelope"></i>
+          <span class="link-text">Contact</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Mobile Bottom Navigation -->
+  <nav class="mobile-nav">
+    <a href="#home" class="mobile-link active">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </a>
+    <a href="#about" class="mobile-link">
+      <i class="fas fa-user"></i>
+      <span>About</span>
+    </a>
+    <a href="#services" class="mobile-link">
+      <i class="fas fa-bolt"></i>
+      <span>Services</span>
+    </a>
+    <a href="#contact" class="mobile-link">
+      <i class="fas fa-envelope"></i>
+      <span>Contact</span>
+    </a>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-background">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+      </div>
+      
+      <div class="hero-content">
+        <div class="hero-badge" data-aos="fade-up">
+          <i class="fas fa-fire"></i>
+          <span>Ready to Deploy</span>
+        </div>
+        
+        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+          <span class="title-line">Digital</span>
+          <span class="title-line gradient-text">Excellence</span>
+        </h1>
+        
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
+          Marketing Strategist & Growth Expert
+        </p>
+        
+        <p class="hero-description" data-aos="fade-up" data-aos-delay="600">
+          Crafting high-impact marketing campaigns that cut through the noise. 
+          Specializing in data-driven strategies for the modern web.
+        </p>
+        
+        <div class="hero-stats" data-aos="fade-up" data-aos-delay="800">
+          <div class="stat">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Campaigns</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">150%</span>
+            <span class="stat-label">ROI Avg</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">3+</span>
+            <span class="stat-label">Years Exp</span>
+          </div>
+        </div>
+        
+        <div class="hero-actions" data-aos="fade-up" data-aos-delay="1000">
+          <a href="#services" class="btn btn-primary">
+            <span>Explore Services</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#" class="btn btn-secondary">
+            <i class="fas fa-file-alt"></i>
+            <span>Resume</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1200">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll to explore</span>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">Who I Am</span>
+          <h2 class="section-title">About Me</h2>
+        </div>
+        
+        <div class="about-content">
+          <div class="about-text" data-aos="fade-right">
+            <p class="about-intro">
+              I am a results-oriented marketer with a passion for storytelling and analytics. 
+              My approach combines creative vision with rigorous data analysis to build 
+              brands that stand out.
+            </p>
+            
+            <div class="about-highlights">
+              <div class="highlight">
+                <i class="fas fa-bullseye"></i>
+                <div>
+                  <h4>Strategic Vision</h4>
+                  <p>Developing long-term roadmaps for sustainable growth.</p>
+                </div>
+              </div>
+              <div class="highlight">
+                <i class="fas fa-chart-pie"></i>
+                <div>
+                  <h4>Analytics</h4>
+                  <p>Turning complex data into actionable insights.</p>
+                </div>
+              </div>
+              <div class="highlight">
+                <i class="fas fa-pen-nib"></i>
+                <div>
+                  <h4>Content Creation</h4>
+                  <p>Compelling copy that converts visitors into customers.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about-skills" data-aos="fade-left">
+            <h3>Core Competencies</h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-search"></i></div>
+                <span>SEO</span>
+                <div class="skill-level" data-level="90"></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-ad"></i></div>
+                <span>PPC</span>
+                <div class="skill-level" data-level="85"></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-hashtag"></i></div>
+                <span>Social Media</span>
+                <div class="skill-level" data-level="95"></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                <span>Analytics</span>
+                <div class="skill-level" data-level="88"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">What I Do</span>
+          <h2 class="section-title">Services</h2>
+        </div>
+        
+        <div class="services-grid">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3>Growth Marketing</h3>
+            <p>Accelerate your user acquisition through rapid experimentation and data-driven tactics.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Funnel Optimization</li>
+              <li><i class="fas fa-check"></i> A/B Testing</li>
+              <li><i class="fas fa-check"></i> User Retention</li>
+            </ul>
+          </div>
+          
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3>Brand Strategy</h3>
+            <p>Building cohesive brand identities that resonate with your target audience.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Visual Identity</li>
+              <li><i class="fas fa-check"></i> Brand Voice</li>
+              <li><i class="fas fa-check"></i> Positioning</li>
+            </ul>
+          </div>
+          
+          <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Community Mgmt</h3>
+            <p>Nurturing loyal communities around your product or service.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Engagement Strategy</li>
+              <li><i class="fas fa-check"></i> Content Moderation</li>
+              <li><i class="fas fa-check"></i> Event Planning</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contact Section (Placeholder to end cleanly) -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Get in Touch</span>
+                <h2 class="section-title">Contact</h2>
+            </div>
+            <div class="contact-content" data-aos="fade-up">
+                <p>Ready to take your marketing to the next level? Let's connect.</p>
+                <a href="mailto:example@email.com" class="btn btn-primary">Say Hello</a>
+            </div>
+        </div>
+    </section>
+
+  </main>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
