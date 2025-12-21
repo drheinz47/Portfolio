@@ -89,4 +89,80 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Grid Motion Logic ---
+    const initGridMotion = () => {
+        const container = document.getElementById('gridMotion-container');
+        if (!container) return;
+
+        // Configuration
+        const totalRows = 4;
+        const itemsPerRow = 7;
+        const totalItems = totalRows * itemsPerRow;
+        
+        // Generate Grid Items
+        for (let i = 0; i < totalRows; i++) {
+            const row = document.createElement('div');
+            row.classList.add('row');
+            
+            for (let j = 0; j < itemsPerRow; j++) {
+                const itemIndex = i * itemsPerRow + j;
+                const item = document.createElement('div');
+                item.classList.add('row__item');
+                
+                // For now, using empty placeholder or "0" as requested if interpreted literally,
+                // but "0" likely means placeholder.
+                // We'll create the structure ready for images.
+                item.innerHTML = `
+                    <div class="row__item-inner">
+                        <div class="row__item-img"></div> 
+                        <div class="row__item-content"></div>
+                    </div>
+                `;
+                row.appendChild(item);
+            }
+            container.appendChild(row);
+        }
+
+        // Animation Logic
+        const rows = document.querySelectorAll('.row');
+        let mouseX = window.innerWidth / 2;
+
+        const handleMouseMove = (e) => {
+            mouseX = e.clientX;
+        };
+
+        const updateMotion = () => {
+            const maxMoveAmount = 300;
+            const baseDuration = 0.8;
+            const inertiaFactors = [0.6, 0.4, 0.3, 0.2];
+
+            rows.forEach((row, index) => {
+                const direction = index % 2 === 0 ? 1 : -1;
+                // Calculate move amount based on mouse position relative to center
+                const moveAmount = ((mouseX / window.innerWidth) * maxMoveAmount - maxMoveAmount / 2) * direction;
+
+                gsap.to(row, {
+                    x: moveAmount,
+                    duration: baseDuration + inertiaFactors[index % inertiaFactors.length],
+                    ease: 'power3.out',
+                    overwrite: 'auto'
+                });
+            });
+        };
+
+        // Start GSAP Ticker
+        gsap.ticker.add(updateMotion);
+        window.addEventListener('mousemove', handleMouseMove);
+
+        // Cleanup function (if needed in SPA, but here standard page load is fine)
+        // logic is self-contained.
+    };
+
+    // Initialize Grid Motion only if GSAP is loaded
+    if (typeof gsap !== 'undefined') {
+        initGridMotion();
+    } else {
+        console.warn('GSAP not loaded. Grid Motion disabled.');
+    }
+
 });
