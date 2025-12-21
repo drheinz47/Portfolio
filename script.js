@@ -104,17 +104,24 @@ document.addEventListener('DOMContentLoaded', () => {
             const row = document.createElement('div');
             row.classList.add('row');
             
+            // Map grid row index to file y-coordinate (1-3)
+            // We loop y (rows) if totalRows > 3
+            const yIndex = (i % 3) + 1;
+
             for (let j = 0; j < itemsPerRow; j++) {
-                const itemIndex = i * itemsPerRow + j;
                 const item = document.createElement('div');
                 item.classList.add('row__item');
                 
-                // For now, using empty placeholder or "0" as requested if interpreted literally,
-                // but "0" likely means placeholder.
-                // We'll create the structure ready for images.
+                // Map grid column index to file x-coordinate (1-3)
+                // We loop x (columns) to create the infinite scroll effect
+                const xIndex = (j % 3) + 1;
+                
+                // Construct filename: x{col}y{row}.png
+                const imagePath = `images/x${xIndex}y${yIndex}.png`;
+                
                 item.innerHTML = `
                     <div class="row__item-inner">
-                        <div class="row__item-img"></div> 
+                        <div class="row__item-img" style="background-image: url('${imagePath}')"></div> 
                         <div class="row__item-content"></div>
                     </div>
                 `;
