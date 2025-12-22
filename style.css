@@ -597,10 +597,11 @@ body {
   left: 0;
   top: 0;
   height: 100%;
-  width: attr(data-level); /* Note: attr() for width doesn't work directly in CSS for custom attributes without JS or specific contexts, usually we set width inline. I'll fix this in JS or inline styles. For now, let's assume JS handles it or we set width manually. Actually, let's just make it full for visual */
   width: 0; /* JS will animate this */
-  background: var(--primary-color);
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  border-radius: 2px;
   transition: width 1s ease;
+  box-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
 }
 
 /* Services Section */
@@ -725,10 +726,11 @@ body {
 .my-work-section {
   position: relative;
   background-color: var(--bg-color);
+  padding-top: 0;
 }
 
 .my-work-header {
-  padding: 2rem 2rem 1rem 2rem;
+  padding: 0 2rem 1rem 2rem;
   text-align: center;
 }
 
