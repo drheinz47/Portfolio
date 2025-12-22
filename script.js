@@ -117,12 +117,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const xIndex = (j % 3) + 1;
                 
                 // Construct filename: x{col}y{row}.png
-                const imagePath = `images/x${xIndex}y${yIndex}.png`;
+                // Add a cache-busting query parameter to force reload of new images
+                const imagePath = `images/x${xIndex}y${yIndex}.png?t=${new Date().getTime()}`;
                 
                 item.innerHTML = `
                     <div class="row__item-inner">
                         <div class="row__item-img" style="background-image: url('${imagePath}')"></div> 
-                        <div class="row__item-content"></div>
                     </div>
                 `;
                 row.appendChild(item);

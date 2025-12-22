@@ -723,21 +723,22 @@ body {
 
 /* My Work / Grid Motion Section */
 .my-work-section {
-  padding: 0 !important; /* Override standard section padding */
   position: relative;
-  overflow: hidden;
   background-color: var(--bg-color);
 }
 
-.my-work-header-container {
-  position: absolute;
-  top: 4rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
+.my-work-header {
+  padding: 2rem 2rem 1rem 2rem;
   text-align: center;
-  pointer-events: none; /* Allow clicking through to the grid if needed */
-  width: 100%;
+}
+
+.my-work-header .section-header {
+  margin-bottom: 1.5rem;
+}
+
+.my-work-grid-container {
+  position: relative;
+  overflow: hidden;
 }
 
 .noscroll { 
